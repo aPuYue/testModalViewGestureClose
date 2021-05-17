@@ -20,7 +20,7 @@
                                 <rect key="frame" x="184" y="433" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="SVP-QL-kMe" kind="presentation" id="53W-Gu-kgS"/>
+                                    <action selector="open:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Glb-eF-Y3m"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -39,9 +39,9 @@
         <!--Modal View Controller-->
         <scene sceneID="e5V-Pa-Jym">
             <objects>
-                <viewController id="SVP-QL-kMe" customClass="ModalViewController" customModule="testModalViewGestureClose" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ModalViewController" id="SVP-QL-kMe" customClass="ModalViewController" customModule="testModalViewGestureClose" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Hz-M2-h72">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="aSC-6l-aaM"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>

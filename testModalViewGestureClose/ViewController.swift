@@ -11,12 +11,13 @@ class ViewController: UIViewController {
 
     let interactor = Interactor()
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destinationViewController = segue.destination as? ModalViewController {
-            destinationViewController.modalPresentationStyle = .fullScreen;
-            destinationViewController.transitioningDelegate = self
-            destinationViewController.interactor = interactor
-        }
+    @IBAction func open(_ sender: Any) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)//SB 文件名称
+        let vc = sb.instantiateViewController(withIdentifier: "ModalViewController") as! ModalViewController//左边是IB内看到的 VC 的[storyboard ID]属性值,右边是 Class 名称
+        vc.modalPresentationStyle = .fullScreen
+        vc.transitioningDelegate = self
+        vc.interactor = interactor
+        self.present(vc, animated: true, completion: nil)
     }
 }
 
