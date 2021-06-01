@@ -10,8 +10,15 @@ import UIKit
 class ModalViewController: UIViewController {
 
     var interactor:Interactor? = nil
+    
+    override func viewDidLoad() {
+        let pan = UIPanGestureRecognizer(target: self, action: #selector(handleGesture(_:)))
+//        pan.delegate = self
+//        pan.require(toFail: swipeGesture)
+        self.view.addGestureRecognizer(pan)
+    }
 
-    @IBAction func handleGesture(_ sender: UIPanGestureRecognizer) {
+    @objc func handleGesture(_ sender: UIPanGestureRecognizer) {
         let percentThreshold:CGFloat = 0.5 //打开到多少
 
         // convert y-position to downward pull progress (percentage)
