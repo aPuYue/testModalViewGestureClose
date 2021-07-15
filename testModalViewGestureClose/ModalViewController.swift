@@ -16,6 +16,17 @@ class ModalViewController: UIViewController {
 //        pan.delegate = self
 //        pan.require(toFail: swipeGesture)
         self.view.addGestureRecognizer(pan)
+        
+//        let swipeGesture = UISwipeGestureRecognizer(
+//            target: self,
+//            action: #selector(swipe))
+////        swipeGesture.delegate = self
+//        swipeGesture.direction = .down
+//        self.view.addGestureRecognizer(swipeGesture)
+    }
+    
+    @objc func swipe() {
+        print("@#$_swipe")
     }
 
     @objc func handleGesture(_ sender: UIPanGestureRecognizer) {
@@ -32,23 +43,28 @@ class ModalViewController: UIViewController {
 
         switch sender.state {
         case .began:
+            print("@#$3")
             interactor.hasStarted = true
             dismiss(animated: true, completion: nil)
         case .changed:
+            print("@#$4")
             interactor.shouldFinish = progress > percentThreshold
             self.view.alpha = 1 - progress//实时改变透明度
             interactor.update(progress)
         case .cancelled:
+            print("@#$5")
             interactor.hasStarted = false
             self.view.alpha = 1
             interactor.cancel()
         case .ended:
+            print("@#$6")
             interactor.hasStarted = false
             self.view.alpha = 1
             interactor.shouldFinish
                 ? interactor.finish()//关闭 view
                 : interactor.cancel()//取消关闭
         default:
+            print("@#$7")
             break
         }
     }

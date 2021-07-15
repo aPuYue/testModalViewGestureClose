@@ -23,10 +23,12 @@ class ViewController: UIViewController {
 
 extension ViewController: UIViewControllerTransitioningDelegate {
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        print("@#$1")
         return DismissAnimator()
     }
     
     func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        print("@#$2")
         return interactor.hasStarted ? interactor : nil
     }
 }
