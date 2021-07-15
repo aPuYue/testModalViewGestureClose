@@ -44,18 +44,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n4l-uJ-Yby">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dr3-up-qXa">
                                 <rect key="frame" x="100" y="144" width="214" height="618"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                            </imageView>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aSC-6l-aaM"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
-                            <constraint firstItem="n4l-uJ-Yby" firstAttribute="top" secondItem="aSC-6l-aaM" secondAttribute="top" constant="100" id="bsd-wQ-m3y"/>
-                            <constraint firstItem="n4l-uJ-Yby" firstAttribute="leading" secondItem="aSC-6l-aaM" secondAttribute="leading" constant="100" id="j4A-ue-4YV"/>
-                            <constraint firstItem="aSC-6l-aaM" firstAttribute="bottom" secondItem="n4l-uJ-Yby" secondAttribute="bottom" constant="100" id="ozg-V4-4fk"/>
-                            <constraint firstItem="aSC-6l-aaM" firstAttribute="trailing" secondItem="n4l-uJ-Yby" secondAttribute="trailing" constant="100" id="tkh-1Y-j4R"/>
+                            <constraint firstItem="dr3-up-qXa" firstAttribute="top" secondItem="aSC-6l-aaM" secondAttribute="top" constant="100" id="CPq-Uy-XI6"/>
+                            <constraint firstItem="dr3-up-qXa" firstAttribute="leading" secondItem="aSC-6l-aaM" secondAttribute="leading" constant="100" id="PS8-WZ-ab2"/>
+                            <constraint firstItem="aSC-6l-aaM" firstAttribute="trailing" secondItem="dr3-up-qXa" secondAttribute="trailing" constant="100" id="RIV-xC-PiC"/>
+                            <constraint firstItem="aSC-6l-aaM" firstAttribute="bottom" secondItem="dr3-up-qXa" secondAttribute="bottom" constant="100" id="VHM-nc-hPw"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -70,9 +70,6 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
